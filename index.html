@@ -28,7 +28,24 @@
 
         </div>
         <div id ="game-screen">
-
+            <div id = score-tally>
+                <p id ="score">User: 0 v CPU: 0</p>
+            </div>
+            <form id = "game-form">
+                <div>
+                    <label for = "user-selection">
+                        Select your choice
+                    </label>
+                    <select name="user-selection" id="user-selection">
+                        <option value="Rock">Rock</option>
+                        <option value="Paper">Paper</option>
+                        <option value="Scissors">Scissors</option>
+                    </select>
+                    <button id = "go-button">Go!</button>
+                
+                </div>
+            </form>
+            <p id = "game-history"></p>
         </div>
 
     </div>
