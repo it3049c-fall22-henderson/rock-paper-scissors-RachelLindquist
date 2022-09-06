@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
     <!-- Bootstrap Styles-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="resources/styles/bootstrap.min.css">
     <link rel="stylesheet" href="resources/styles/styles.css" />
 </head>
@@ -18,9 +19,9 @@
             <form id = "name-form">
                 <div>
                     <label for="username">Your Name</label>
-                    <input id = "username" placeholder = "Enter Name Here..." name = "username">
+                    <input id = "username" placeholder = "Enter Name Here..." name = "username" class = "form-control">
                 </div>
-                <button id = "start-game-button">
+                <button id = "start-game-button" class = "btn btn-primary">
                     Start Game!
                 </button>
 
@@ -32,16 +33,16 @@
                 <p id ="score">User: 0 v CPU: 0</p>
             </div>
             <form id = "game-form">
-                <div>
+                <div class = "form-group"> <!-- confused by step 6 in part 2 I think it goes here-->
                     <label for = "user-selection">
                         Select your choice
                     </label>
-                    <select name="user-selection" id="user-selection">
+                    <select name="user-selection" id="user-selection" class = "custom-select">
                         <option value="Rock">Rock</option>
                         <option value="Paper">Paper</option>
                         <option value="Scissors">Scissors</option>
                     </select>
-                    <button id = "go-button">Go!</button>
+                    <button id = "go-button" class = "btn btn-success">Go!</button>
                 
                 </div>
             </form>
