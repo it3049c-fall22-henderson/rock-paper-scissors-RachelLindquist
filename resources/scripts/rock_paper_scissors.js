@@ -68,12 +68,12 @@ class RockPaperScissors {
     let cpuSelection = this.generateCPUResponse();
     if (determineWinner(userSelection, cpuSelection) === 'win'){
       this.score.user ++;
-      this.gameHistoryLog.push(this.username.user + "selected" + userSelection + ", CPU selected " + cpuSelection + ": " + this.username.user + " wins!");
+      this.gameHistoryLog.push(this.username + "selected" + userSelection + ", CPU selected " + cpuSelection + ": " + this.username + " wins!");
     } else if (determineWinner(userSelection, cpuSelection) = 'lose'){
       this.score.cpu ++;
-      this.gameHistoryLog.push(this.username.user + "selected" + userSelection + ", CPU selected " + cpuSelection + ": CPU wins!");
+      this.gameHistoryLog.push(this.username + "selected" + userSelection + ", CPU selected " + cpuSelection + ": CPU wins!");
     } else {
-      this.gameHistoryLog.push(this.username.user + "selected" + userSelection + ", CPU selected " + cpuSelection + ": it was a tie!");
+      this.gameHistoryLog.push(this.username + "selected" + userSelection + ", CPU selected " + cpuSelection + ": it was a tie!");
     }
   }
 
