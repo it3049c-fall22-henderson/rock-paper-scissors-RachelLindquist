@@ -16,7 +16,7 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-
+  scoreParagraph.textContent = game.username + ": " + game.score.user + " v CPU: " + game.score.cpu;
 }
 
 // updateGameHistoryUI
