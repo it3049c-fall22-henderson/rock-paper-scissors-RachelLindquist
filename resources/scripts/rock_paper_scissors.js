@@ -1,4 +1,3 @@
-const { times } = require("lodash");
 
 class RockPaperScissors {
   constructor(username) {
@@ -66,14 +65,14 @@ class RockPaperScissors {
    */
   play(userSelection){
     let cpuSelection = this.generateCPUResponse();
-    if (determineWinner(userSelection, cpuSelection) === 'win'){
+    if (this.determineWinner(userSelection, cpuSelection) === 'win'){
       this.score.user ++;
-      this.gameHistoryLog.push(this.username + "selected" + userSelection + ", CPU selected " + cpuSelection + ": " + this.username + " wins!");
-    } else if (determineWinner(userSelection, cpuSelection) === 'lose'){
+      this.gameHistoryLog.push(this.username + " selected" + userSelection + ", CPU selected " + cpuSelection + ": " + this.username + " wins! \n");
+    } else if (this.determineWinner(userSelection, cpuSelection) === 'lose'){
       this.score.cpu ++;
-      this.gameHistoryLog.push(this.username + "selected" + userSelection + ", CPU selected " + cpuSelection + ": CPU wins!");
+      this.gameHistoryLog.push(this.username + " selected" + userSelection + ", CPU selected " + cpuSelection + ": CPU wins! \n");
     } else {
-      this.gameHistoryLog.push(this.username + "selected" + userSelection + ", CPU selected " + cpuSelection + ": it was a tie!");
+      this.gameHistoryLog.push(this.username + " selected" + userSelection + ", CPU selected " + cpuSelection + ": it was a tie! \n");
     }
   }
 

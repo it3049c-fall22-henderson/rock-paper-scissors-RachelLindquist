@@ -25,16 +25,18 @@ function updateGameHistoryUI(){
 }
 
 // start-game-button EventListener
-startGameButton.addEventListener(`click`, function () {
+startGameButton.addEventListener(`click`, function (e) {
+  e.preventDefault()
   const username = userName.value;
-  game = new RockPaperScissors(username);
+  game = new RockPaperScissors (username);
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
   // Complete
 });
 
 // go-button EventListener
-goButton.addEventListener(`click`, function () {
+goButton.addEventListener(`click`, function (e) {
+  e.preventDefault()
   game.play(userSelection.value);
   updateScoreTallyUI();
   updateGameHistoryUI();
